@@ -2,7 +2,7 @@
 " Language:	Java
 " Maintainer: Pete Kazmier (pete-vim AT kazmier DOT com)
 " Last Change: 2002 Nov 21 
-" Revision: $Id: java_getset.vim,v 1.9 2002/12/01 04:15:11 kaz Exp $
+" Revision: $Id: java_getset.vim,v 1.10 2002/12/02 15:14:31 kaz Exp $
 " Credit: 
 "    - Based on jcommenter.vim by Kalle Björklid <bjorklid@st.jyu.fi.
 "    - Thanks to Dan Sharp for his feedback, suggestions and help.
@@ -740,7 +740,7 @@ if !exists("*s:MoveToInsertPosition")
     
     " 0 indicates end of class (and is default)
     else
-      normal! ?{<CR>w99[{%k
+      execute "normal! ?{\<CR>w99[{%k" | nohls
 
     endif 
 
